@@ -22,20 +22,4 @@ for url in websites:
         response_times.append(requests.get(url).elapsed.microseconds / 1000)
     avg_response_times.append(average(response_times))
 
-if avg_response_times.index(min(avg_response_times)) == 0:
-    print(websites[0], 'has the best response time: ', min(avg_response_times), '[ms]')
-
-elif avg_response_times.index(min(avg_response_times)) == 1:
-    print(websites[1], 'has the best response time: ', min(avg_response_times), '[ms]')
-
-elif avg_response_times.index(min(avg_response_times)) == 2:
-    print(websites[2], 'has the best response time: ', min(avg_response_times), '[ms]')
-
-elif avg_response_times.index(min(avg_response_times)) == 3:
-    print(websites[3], 'has the best response time: ', min(avg_response_times), '[ms]')
-
-elif avg_response_times.index(min(avg_response_times)) == 4:
-    print(websites[4], 'has the best response time: ', min(avg_response_times), '[ms]')
-
-elif avg_response_times.index(min(avg_response_times)) == 5:
-    print(websites[5], 'has the best response time: ', min(avg_response_times), '[ms]')
+print(websites[avg_response_times.index(min(avg_response_times))], 'has the best response time: ', min(avg_response_times), '[ms]')
